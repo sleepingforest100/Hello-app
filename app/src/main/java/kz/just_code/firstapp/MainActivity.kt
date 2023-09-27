@@ -18,6 +18,11 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-setContentView(binding.root)
+          setContentView(binding.root)
+
+           setUpName("Luna")
+    }
+    private fun setUpName(name: String){
+        binding.nameView.text=getString(R.string.hello_my_name, name)
     }
 }
